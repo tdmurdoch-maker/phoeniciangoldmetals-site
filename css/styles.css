@@ -154,16 +154,22 @@ a:hover { color: var(--gold-soft); }
 }
 .brand:hover { color: var(--ink); }
 
-/* Official gold-bar lockup is a wide frame. Size it so “Phoenician Gold” stays readable. */
+/* Gold-bar lockup is a wide frame; the name is a small band inside it.
+   Keep the plaque at header scale instead of the old 19rem banner. */
 .brand-logo {
   gap: 0;
   line-height: 0;
+  flex: 0 0 auto;
 }
 
 .brand-logo-img {
-  width: min(19rem, calc(100vw - 7rem));
-  height: auto;
-  max-width: 100%;
+  width: auto;
+  height: 4rem;
+  max-width: calc(100vw - 6.75rem);
+}
+
+.site-footer .brand-logo-img {
+  height: 3.5rem;
 }
 
 .nav-toggle-input {
@@ -818,6 +824,14 @@ a.button[aria-disabled="true"]:hover {
     flex-wrap: wrap;
     min-height: 4.1rem;
     padding: 0.65rem 0;
+  }
+
+  .brand-logo-img {
+    height: 3.05rem;
+  }
+
+  .site-footer .brand-logo-img {
+    height: 3rem;
   }
 
   .nav-toggle { display: grid; place-items: center; }
