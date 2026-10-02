@@ -141,6 +141,7 @@ a:hover { color: var(--gold-soft); }
   justify-content: space-between;
   gap: 1.5rem;
   min-height: var(--header-h);
+  padding-block: 0.55rem;
 }
 
 .brand {
@@ -149,39 +150,20 @@ a:hover { color: var(--gold-soft); }
   gap: 0.8rem;
   color: var(--ink);
   text-decoration: none;
+  min-width: 0;
 }
 .brand:hover { color: var(--ink); }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 2.35rem;
-  height: 2.35rem;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  color: var(--gold-soft);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  background: radial-gradient(circle at 30% 25%, rgba(201, 164, 92, 0.18), transparent 62%);
+/* Official gold-bar lockup is a wide frame. Size it so “Phoenician Gold” stays readable. */
+.brand-logo {
+  gap: 0;
+  line-height: 0;
 }
 
-.brand-text { display: grid; line-height: 1.15; }
-
-.brand-name {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.18rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.brand-place {
-  margin-top: 0.16rem;
-  color: var(--ink-muted);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+.brand-logo-img {
+  width: min(19rem, calc(100vw - 7rem));
+  height: auto;
+  max-width: 100%;
 }
 
 .nav-toggle-input {
@@ -789,17 +771,9 @@ a.button[aria-disabled="true"]:hover {
 
 .site-footer .brand { color: var(--white); }
 .site-footer .brand:hover { color: var(--white); }
-.site-footer .brand-mark {
-  border-color: var(--gold);
-  color: var(--gold-soft);
-  background: transparent;
-}
-.site-footer .brand-place,
-.site-footer p {
-  color: var(--ink-muted);
-}
 .site-footer p {
   margin: 0.85rem 0 0;
+  color: var(--ink-muted);
   font-size: 0.88rem;
   max-width: 34ch;
   line-height: 1.55;
