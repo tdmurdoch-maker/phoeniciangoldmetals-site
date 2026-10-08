@@ -906,3 +906,39 @@ a.button[aria-disabled="true"]:hover {
     --gold: #e0be72;
   }
 }
+
+/* ——— Official App page ——— */
+.app-glance {
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-soft);
+}
+.app-glance li {
+  padding: 0.42rem 0 0.42rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.app-glance li:last-child { border-bottom: 0; }
+.app-glance li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.app-features h3 { margin-bottom: 0.6rem; }
+.app-steps {
+  margin: 0 0 0.5rem;
+  padding-left: 1.3rem;
+  color: var(--ink-soft);
+}
+.app-steps li { margin-bottom: 0.85rem; padding-left: 0.2rem; }
+.app-steps strong { color: var(--ink); }
+.app-steps li::marker { color: var(--gold); font-weight: 650; }
+@media (max-width: 880px) {
+  .app-hero .actions .button { flex: 1 1 100%; text-align: center; }
+}
