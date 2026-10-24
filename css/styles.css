@@ -403,6 +403,7 @@ a.button[aria-disabled="true"]:hover {
 }
 
 .section-intro h2 { max-width: 16ch; }
+.section-intro h3 { margin-top: 2rem; }
 .section-intro p {
   color: var(--ink-soft);
   font-size: 1.06rem;
